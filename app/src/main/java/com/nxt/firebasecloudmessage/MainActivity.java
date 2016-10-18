@@ -1,5 +1,6 @@
 package com.nxt.firebasecloudmessage;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.nxt.firebasecloudmessage.NanoChat.NanoChatActivity;
 
 import org.w3c.dom.Text;
 
@@ -43,7 +45,13 @@ public class MainActivity extends AppCompatActivity {
         mButtonSunny = (Button) findViewById(R.id.buttonSunny);
         mButtonFoggy = (Button) findViewById(R.id.buttonFoggy);
 
-
+        Button nanoChat=(Button)findViewById(R.id.toggleButtonNanoChat);
+        nanoChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NanoChatActivity.class));
+            }
+        });
     }
 
     @Override
