@@ -45,20 +45,12 @@ public class MainActivity extends AppCompatActivity {
         mButtonSunny = (Button) findViewById(R.id.buttonSunny);
         mButtonFoggy = (Button) findViewById(R.id.buttonFoggy);
 
-        Button nanoChat=(Button)findViewById(R.id.toggleButtonNanoChat);
-        nanoChat.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-            }
-        });
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-
-
 
         mConditionRef.addValueEventListener(new ValueEventListener() {
             @Override

@@ -29,10 +29,7 @@
             </intent-filter>
         </service>
 
-        <activity
-            android:name=".NanoChat.NanoChatActivity"
-            android:label="@string/title_activity_nano_chat"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>
