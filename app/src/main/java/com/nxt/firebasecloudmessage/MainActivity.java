@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
-import com.nxt.firebasecloudmessage.NanoChat.NanoChatActivity;
+
 
 import org.w3c.dom.Text;
 
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         nanoChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, NanoChatActivity.class));
+
             }
         });
     }
