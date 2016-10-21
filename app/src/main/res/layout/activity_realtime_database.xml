@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/buttonListOfData"
+        android:id="@+id/buttonStorage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ListData"
@@ -27,23 +27,23 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:text="RWData"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonListOfData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonStorage"
         app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
-        android:id="@+id/buttonStructureData"
+        android:id="@+id/buttonDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:text="StrData"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonListOfData"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonStorage"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintBaseline_creator="1"
         tools:layout_constraintRight_creator="1" />
 
     <Button
-        android:id="@+id/buttonOffline"
+        android:id="@+id/buttonHosting"
         android:layout_width="106dp"
         android:layout_height="57dp"
         android:layout_marginBottom="16dp"
@@ -64,7 +64,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:text="Test"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonOffline"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonHosting"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

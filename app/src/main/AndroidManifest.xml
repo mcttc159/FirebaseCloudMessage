@@ -18,6 +18,12 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".database.DatabaseActivity">
+
+        </activity>
+
+        <activity android:name=".database.ReadWriteDataActivity"/>
+
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

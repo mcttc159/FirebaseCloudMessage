@@ -11,16 +11,16 @@
         android:id="@+id/textViewCondition"
         android:layout_width="85dp"
         android:layout_height="60dp"
-        android:text="Condition"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Condition"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="16dp"
-        app:layout_constraintHorizontal_bias="0.47" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSunny"
@@ -36,70 +36,70 @@
         android:id="@+id/buttonFoggy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Foggy"
         android:layout_marginEnd="16dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginRight="16dp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSunny" />
+        android:text="Foggy"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonSunny"
+        app:layout_constraintRight_toRightOf="parent" />
 
     <Button
-        android:id="@+id/buttonListOfData"
+        android:id="@+id/buttonStorage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListData"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonStructureData"
-        app:layout_constraintRight_toRightOf="@+id/buttonStructureData"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonStructureData"
-        app:layout_constraintHorizontal_bias="0.0" />
+        android:text="Storage"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonDatabase"
+        app:layout_constraintRight_toRightOf="@+id/buttonDatabase"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDatabase" />
 
     <Button
         android:id="@+id/buttonAuthentication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Authentication"
         android:layout_marginTop="72dp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewCondition"
+        android:text="Authentication"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewCondition"
         app:layout_constraintRight_toRightOf="@+id/textViewCondition"
-        app:layout_constraintLeft_toLeftOf="@+id/textViewCondition" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewCondition" />
 
     <Button
-        android:id="@+id/buttonStructureData"
+        android:id="@+id/buttonDatabase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="StrData"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonAuthentication"
+        android:text="Database"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonAuthentication"
         app:layout_constraintRight_toRightOf="@+id/buttonAuthentication"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonAuthentication" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonAuthentication" />
 
     <Button
-        android:id="@+id/buttonOffline"
+        android:id="@+id/buttonHosting"
         android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:text="Offline"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonListOfData"
-        app:layout_constraintRight_toRightOf="@+id/buttonListOfData"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonListOfData" />
+        android:text="Hosting"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonStorage"
+        app:layout_constraintRight_toRightOf="@+id/buttonStorage"
+        app:layout_constraintTop_toBottomOf="@+id/buttonStorage" />
 
     <Button
-        android:id="@+id/buttonTest"
+        android:id="@+id/buttonTestLab"
         android:layout_width="111dp"
         android:layout_height="wrap_content"
-        android:text="Test"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/buttonOffline"
-        app:layout_constraintRight_toRightOf="@+id/buttonOffline"
-        app:layout_constraintLeft_toLeftOf="@+id/buttonOffline" />
+        android:text="TestLab"
+        app:layout_constraintLeft_toLeftOf="@+id/buttonHosting"
+        app:layout_constraintRight_toRightOf="@+id/buttonHosting"
+        app:layout_constraintTop_toBottomOf="@+id/buttonHosting" />
 
     <android.support.constraint.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        app:layout_constraintGuide_begin="20dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteY="20dp"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp"
+        app:layout_constraintGuide_percent="0.031311154" />
 
 </android.support.constraint.ConstraintLayout>

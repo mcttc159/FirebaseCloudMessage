@@ -15,6 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
+import com.nxt.firebasecloudmessage.database.DatabaseActivity;
+import com.nxt.firebasecloudmessage.models.User;
 
 
 import org.w3c.dom.Text;
@@ -25,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
     Button mButtonSunny;
     Button mButtonFoggy;
 
-    DatabaseReference mRootRef= FirebaseDatabase.getInstance().getReference();
-    DatabaseReference mConditionRef=mRootRef.child("condition");
+    DatabaseReference mRootRef = FirebaseDatabase.getInstance().getReference();
+    DatabaseReference mConditionRef = mRootRef.child("condition");
 
 
     @Override
@@ -46,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
         mButtonFoggy = (Button) findViewById(R.id.buttonFoggy);
 
 
+        Button buttonAuth = (Button) findViewById(R.id.buttonAuthentication);
+        Button buttonDatabase = (Button) findViewById(R.id.buttonDatabase);
+        Button buttonStorage = (Button) findViewById(R.id.buttonStorage);
+        Button buttonHosting = (Button) findViewById(R.id.buttonHosting);
+        Button buttonTestLab = (Button) findViewById(R.id.buttonTestLab);
+
+        buttonDatabase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DatabaseActivity.class));
+            }
+        });
+
     }
 
     @Override
@@ -55,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
         mConditionRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String text=dataSnapshot.getValue(String.class);
+                String text = dataSnapshot.getValue(String.class);
+
+
                 mConditionTextView.setText(text);
             }
 
