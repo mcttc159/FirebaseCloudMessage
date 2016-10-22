@@ -23,6 +23,7 @@
         </activity>
 
         <activity android:name=".database.ReadWriteDataActivity"/>
+        <activity android:name=".database.ListDataActivity"/>
 
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>

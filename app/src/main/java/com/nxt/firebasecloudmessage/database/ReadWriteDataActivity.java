@@ -81,19 +81,21 @@ public class ReadWriteDataActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
 
-//        postDatabase.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Post post=dataSnapshot.getValue(Post.class);
-//
-//                textViewUserId.setText(post.uid!=null?post.uid:"null");
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
+        postDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Log.d("________","change");
+
+                Post post=dataSnapshot.getValue(Post.class);
+
+                textViewUserId.setText(post.uid!=null?post.uid:"null");
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         database.addChildEventListener(new ChildEventListener() {
             @Override

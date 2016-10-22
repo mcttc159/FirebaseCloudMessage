@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -16,10 +15,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.nxt.firebasecloudmessage.database.DatabaseActivity;
-import com.nxt.firebasecloudmessage.models.User;
-
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -50,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonAuth = (Button) findViewById(R.id.buttonAuthentication);
         Button buttonDatabase = (Button) findViewById(R.id.buttonDatabase);
-        Button buttonStorage = (Button) findViewById(R.id.buttonStorage);
+        Button buttonStorage = (Button) findViewById(R.id.buttonListData);
         Button buttonHosting = (Button) findViewById(R.id.buttonHosting);
         Button buttonTestLab = (Button) findViewById(R.id.buttonTestLab);
 

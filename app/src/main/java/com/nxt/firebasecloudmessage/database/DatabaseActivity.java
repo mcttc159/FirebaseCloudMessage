@@ -28,5 +28,13 @@ public class DatabaseActivity extends AppCompatActivity {
                 startActivity(new Intent(DatabaseActivity.this, ReadWriteDataActivity.class));
             }
         });
+
+        Button buttonListData = (Button) findViewById(R.id.buttonListData);
+        buttonListData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DatabaseActivity.this, ListDataActivity.class));
+            }
+        });
     }
 }
