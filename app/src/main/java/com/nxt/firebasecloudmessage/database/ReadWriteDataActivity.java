@@ -86,48 +86,29 @@ public class ReadWriteDataActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d("________","change");
 
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+      // postDatabase.limitToFirst(5);
+        postDatabase.limitToLast(11).orderByValue().addChildEventListener(new ChildEventListener() {
+            String sx="";
+            @Override
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+
                 Post post=dataSnapshot.getValue(Post.class);
 
-                textViewUserId.setText(post.uid!=null?post.uid:"null");
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        database.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Log.d("database","add");
-            }
-
-            @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-                Log.d("database","change");
-            }
-
-            @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-                Log.d("database","remove");
-            }
-
-            @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-                Log.d("database","move");
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-        postDatabase.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                Log.d("postDatabase","add");
+                dataSnapshot.getKey();
+                sx+=s+"\n";
+                textViewUserId.setText(post.uid!=null?post.uid+"__"+sx:"null");
+                Log.d("postDatabase","add__"+dataSnapshot.getKey());
             }
 
             @Override
