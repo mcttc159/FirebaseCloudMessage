@@ -22,6 +22,10 @@ public class FireBaseIDTask extends AsyncTask<String, Void, Boolean> {
     protected Boolean doInBackground(String... params) {
 
         try {
+
+           // Log.d("toke",params[0]);
+
+
             URL url = new URL("http://10.9.1.39/FirebaseServer/api/fcm/?token=" + params[0]);
 
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -40,6 +44,8 @@ public class FireBaseIDTask extends AsyncTask<String, Void, Boolean> {
             Log.d("ketqua",builder.toString());
             boolean kt = builder.toString().contains("true");
             return kt;
+
+
 
 
         } catch (IOException e) {

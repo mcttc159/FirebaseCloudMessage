@@ -18,19 +18,21 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".database.DatabaseActivity">
+        <!--<activity android:name=".database.DatabaseActivity">-->
 
-        </activity>
+        <!--</activity>-->
 
-        <activity android:name=".database.ReadWriteDataActivity"/>
-        <activity android:name=".database.ListDataActivity"/>
+        <!--<activity android:name=".database.ReadWriteDataActivity"/>-->
+        <!--<activity android:name=".database.ListDataActivity"/>-->
 
-        <service android:name=".MyFirebaseMessagingService">
+
+
+        <service android:name="com.nxt.firebasecloudmessage.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseIDService">
+        <service android:name="com.nxt.firebasecloudmessage.MyFirebaseIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>

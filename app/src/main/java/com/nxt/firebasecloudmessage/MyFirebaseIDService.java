@@ -16,9 +16,11 @@ public class MyFirebaseIDService extends FirebaseInstanceIdService {
         super.onTokenRefresh();
 
         String token= FirebaseInstanceId.getInstance().getToken();
-        Log.d("tokennnnnn",token);
 
-        luuTokenVaoCSDL(token);
+      //  luuTokenVaoCSDL(token);
+
+        Log.d("laytoken",token);
+
     }
 
     private void luuTokenVaoCSDL(String token){
